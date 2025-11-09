@@ -26,7 +26,7 @@ require("lazy").setup({
       "MunifTanjim/nui.nvim",
 
     },
-    -- lazy = false
+    lazy = false
   }, 
   {
     "s1n7ax/nvim-window-picker",
@@ -49,5 +49,6 @@ require("lazy").setup({
   }, 
 	{"nvim-treesitter/nvim-treesitter"},
 	{"neovim/nvim-lspconfig"},
-	{"mason-org/mason.nvim"}
+	{"mason-org/mason.nvim"},
+	{"joshdick/onedark.vim"}
 })

@@ -70,8 +70,8 @@ require("neo-tree").setup({
     git_status = {
       symbols = {
         -- Change type
-        added = "✚", -- or "✚"
-        modified = "", -- or ""
+        added = "", -- or "✚"
+        modified = "", -- or ""
         deleted = "✖", -- this can only be used in the git_status source
         renamed = "󰁕", -- this can only be used in the git_status source
         -- Status type
@@ -86,20 +86,20 @@ require("neo-tree").setup({
     file_size = {
       enabled = true,
       width = 12, -- width of the column
-      required_width = 64, -- min width of window required to show this column
+      required_width = 40, -- min width of window required to show this column
     },
     type = {
-      enabled = true,
+      enabled = false,
       width = 10, -- width of the column
       required_width = 122, -- min width of window required to show this column
     },
     last_modified = {
-      enabled = true,
+      enabled = false,
       width = 20, -- width of the column
       required_width = 88, -- min width of window required to show this column
     },
     created = {
-      enabled = true,
+      enabled = false,
       width = 20, -- width of the column
       required_width = 110, -- min width of window required to show this column
     },
@@ -113,7 +113,7 @@ require("neo-tree").setup({
   commands = {},
   window = {
     position = "left",
-    width = 40,
+    width = 30,
     mapping_options = {
       noremap = true,
       nowait = true,
