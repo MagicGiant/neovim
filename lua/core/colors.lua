@@ -5,4 +5,5 @@ function SetColor(color)
 	vim.cmd.colorscheme(color)
 end
 
+
 SetColor()

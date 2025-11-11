@@ -48,7 +48,15 @@ require("lazy").setup({
     end,
   }, 
 	{"nvim-treesitter/nvim-treesitter"},
+-- lsp
 	{"neovim/nvim-lspconfig"},
 	{"mason-org/mason.nvim"},
-	{"joshdick/onedark.vim"}
+-- themes
+	{"joshdick/onedark.vim"},
+-- auto complite
+	{"hrsh7th/cmp-nvim-lsp"},
+	{"hrsh7th/cmp-buffer"},
+	{"hrsh7th/cmp-path"},
+	{"hrsh7th/cmp-cmdline"},
+	{"hrsh7th/nvim-cmp"}
 })

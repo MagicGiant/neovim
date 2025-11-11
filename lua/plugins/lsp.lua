@@ -9,4 +9,12 @@ vim.lsp.config['lua_ls'] = {
   root_markers = { { '.luarc.json', '.luarc.jsonc' }, '.git' },
 }
 
+-- vim.lsp.config['ts_ls'] = {
+  -- cmd = { 'typescript-language-server --stdio' },
+  -- filetypes = { 'javascript', 'typescript' },
+  -- root_markers = { { 'package.json' }, '.git' },
+--}
+
 vim.lsp.enable('lua_ls')
+vim.lsp.enable('ts_ls')
+vim.lsp.enable('ty')
