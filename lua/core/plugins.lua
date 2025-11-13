@@ -51,6 +51,7 @@ require("lazy").setup({
   {
     'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' }
   },
+	{'windwp/nvim-autopairs', event = "InsertEnter", config = true},
 -- lsp
 	{"neovim/nvim-lspconfig"},
 	{"mason-org/mason.nvim"},
