@@ -27,7 +27,7 @@ require("lazy").setup({
 
     },
     lazy = false
-  }, 
+  },
   {
     "s1n7ax/nvim-window-picker",
     version = "2.*",
@@ -46,12 +46,13 @@ require("lazy").setup({
         },
       })
     end,
-  }, 
+  },
 	{"nvim-treesitter/nvim-treesitter"},
   {
     'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' }
   },
 	{'windwp/nvim-autopairs', event = "InsertEnter", config = true},
+	{'numToStr/Comment.nvim'},
 -- lsp
 	{"neovim/nvim-lspconfig"},
 	{"mason-org/mason.nvim"},
@@ -59,7 +60,6 @@ require("lazy").setup({
 -- {"joshdick/onedark.vim"},
 	{"navarasu/onedark.nvim"},
 	{"marko-cerovac/material.nvim"},
-	
 -- auto complite
 	{"hrsh7th/cmp-nvim-lsp"},
 	{"hrsh7th/cmp-buffer"},
