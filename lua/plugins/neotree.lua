@@ -27,8 +27,8 @@ require("neo-tree").setup({
       padding = 1, -- extra padding on left hand side
       -- indent guides
       with_markers = true,
-      indent_marker = "│",
-      last_indent_marker = "└",
+      -- indent_marker = "▶", -- "│",
+      -- last_indent_marker = "▼", -- "└",
       highlight = "NeoTreeIndentMarker",
       -- expander config, needed for nesting files
       with_expanders = nil, -- if nil and file nesting is enabled, will enable expanders
@@ -53,7 +53,7 @@ require("neo-tree").setup({
       end,
       -- The next two settings are only a fallback, if you use nvim-web-devicons and configure default icons there
       -- then these will never be used.
-      default = "*",
+      default = "", -- "*"
       highlight = "NeoTreeFileIcon",
       use_filtered_colors = true, -- Whether to use a different highlight when the file is filtered (hidden, dotfile, etc.).
     },
@@ -75,9 +75,9 @@ require("neo-tree").setup({
         deleted = "✖", -- this can only be used in the git_status source
         renamed = "󰁕", -- this can only be used in the git_status source
         -- Status type
-        untracked = "",
+        untracked = "", -- "",
         ignored = "",
-        unstaged = "󰄱",
+        unstaged = "", -- "󰄱",
         staged = "",
         conflict = "",
       },
@@ -349,4 +349,16 @@ require("neo-tree").setup({
       },
     },
   },
+})
+
+
+vim.diagnostic.config({
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = '',
+      [vim.diagnostic.severity.WARN] = '',
+      [vim.diagnostic.severity.INFO] = '',
+      [vim.diagnostic.severity.HINT] = '󰌵',
+    },
+  }
 })

@@ -48,11 +48,17 @@ require("lazy").setup({
     end,
   }, 
 	{"nvim-treesitter/nvim-treesitter"},
+  {
+    'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' }
+  },
 -- lsp
 	{"neovim/nvim-lspconfig"},
 	{"mason-org/mason.nvim"},
 -- themes
-	{"joshdick/onedark.vim"},
+-- {"joshdick/onedark.vim"},
+	{"navarasu/onedark.nvim"},
+	{"marko-cerovac/material.nvim"},
+	
 -- auto complite
 	{"hrsh7th/cmp-nvim-lsp"},
 	{"hrsh7th/cmp-buffer"},

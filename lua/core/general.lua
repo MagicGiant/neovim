@@ -1,15 +1,11 @@
-
-
 -- табы
 vim.opt.tabstop = 2        -- количество пробелов для отображения таба
 vim.opt.shiftwidth = 2     -- количество пробелов для автоотступов
 vim.opt.softtabstop = 2    -- количество пробелов при редактировании
 
-
 -- нумерация
 vim.wo.number = true
 vim.wo.relativenumber = true
-
 
 -- Автосохранение при изменении текста
 vim.api.nvim_create_autocmd({"TextChanged", "TextChangedI"}, {
@@ -17,12 +13,9 @@ vim.api.nvim_create_autocmd({"TextChanged", "TextChangedI"}, {
 	command= "silent! wa"
 })
 
-
 -- Mouse
 vim.opt.mouse = "a"
 vim.opt.mousefocus = true
-
-
 
 -- всякое
 vim.opt.clipboard = "unnamedplus" -- системный буффер обмена для "y"
