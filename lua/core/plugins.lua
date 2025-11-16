@@ -53,6 +53,18 @@ require("lazy").setup({
   },
 	{'windwp/nvim-autopairs', event = "InsertEnter", config = true},
 	{'numToStr/Comment.nvim'},
+	{'windwp/nvim-ts-autotag'},
+	-- {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+	{
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
+	},
+	{'hadronized/hop.nvim'},
+	-- {
+	-- 	'nvimdev/dashboard-nvim',
+	-- 	event = 'VimEnter',
+	-- 	dependencies = { {'nvim-tree/nvim-web-devicons'}}
+	-- },
 -- lsp
 	{"neovim/nvim-lspconfig"},
 	{"mason-org/mason.nvim"},

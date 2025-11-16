@@ -1,4 +1,3 @@
-
 require("neo-tree").setup({
   close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
   popup_border_style = "NC", -- or "" to use 'winborder' on Neovim v0.11+
@@ -152,7 +151,7 @@ require("neo-tree").setup({
       ["z"] = "close_all_nodes",
       --["Z"] = "expand_all_nodes",
       --["Z"] = "expand_all_subnodes",
-      ["<leader>f"] = {
+      ["<leader>F"] = {
         "add",
         -- this command supports BASH style brace expansion ("x{a,b,c}" -> xa,xb,xc). see `:h neo-tree-file-actions` for details
         -- some commands may take optional config options, see `:h neo-tree-mappings` for details
@@ -160,7 +159,7 @@ require("neo-tree").setup({
           show_path = "none", -- "none", "relative", "absolute"
         },
       },
-      ["<leader>d"] = "add_directory", -- also accepts the optional config.show_path option like "add". this also supports BASH style brace expansion.
+      ["<leader>D"] = "add_directory", -- also accepts the optional config.show_path option like "add". this also supports BASH style brace expansion.
       ["d"] = "delete",
       ["r"] = "rename",
       -- ["b"] = "rename_basename",
@@ -179,8 +178,8 @@ require("neo-tree").setup({
       ["q"] = "close_window",
       ["R"] = "refresh",
       ["?"] = "show_help",
-      ["<"] = "prev_source",
-      [">"] = "next_source",
+      ["<C-h>"] = "prev_source",
+      ["<C-l>"] = "next_source",
       ["i"] = "show_file_details",
       -- ["i"] = {
       --   "show_file_details",
@@ -349,7 +348,12 @@ require("neo-tree").setup({
       },
     },
   },
-})
+	source_selector = {
+		winbar = true,
+		statusline = true
+	}
+	}
+)
 
 
 vim.diagnostic.config({

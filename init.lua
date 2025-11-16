@@ -14,3 +14,10 @@ require('plugins.gitsings')
 require('plugins.telescope')
 require('plugins.autopairs')
 require('plugins.comment')
+-- require('plugins.bufferline')
+require('plugins.hop')
+require('plugins.lualine')
+-- require('plugins.dashboard')
+
+
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
