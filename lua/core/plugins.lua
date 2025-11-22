@@ -18,35 +18,18 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup lazy.nvim
 require("lazy").setup({
   {'phaazon/hop.nvim'},
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
-
-    },
-    lazy = false
-  },
+	{
+		"nvim-tree/nvim-tree.lua",
+		version = "*",
+		lazy = false,
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		}
+	},
   {
     "s1n7ax/nvim-window-picker",
-    version = "2.*",
-    config = function()
-      require("window-picker").setup({
-        filter_rules = {
-          include_current_win = false,
-          autoselect_one = true,
-          -- filter using buffer options
-          bo = {
-            -- if the file type is one of following, the window will be ignored
-            filetype = { "neo-tree", "neo-tree-popup", "notify" },
-            -- if the buffer type is one of following, the window will be ignored
-            buftype = { "terminal", "quickfix" },
-          },
-        },
-      })
-    end,
-  },
+    version = "2.*"
+	},
 	{"nvim-treesitter/nvim-treesitter"},
   {
     'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' }
@@ -54,24 +37,21 @@ require("lazy").setup({
 	{'windwp/nvim-autopairs', event = "InsertEnter", config = true},
 	{'numToStr/Comment.nvim'},
 	{'windwp/nvim-ts-autotag'},
-	-- {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+	{'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+	{"nvim-lua/plenary.nvim"},
+	{"ThePrimeagen/harpoon", dependencies = {"nvim-lua/plenary.nvim"}},
 	{
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' }
 	},
 	{'hadronized/hop.nvim'},
-	-- {
-	-- 	'nvimdev/dashboard-nvim',
-	-- 	event = 'VimEnter',
-	-- 	dependencies = { {'nvim-tree/nvim-web-devicons'}}
-	-- },
 -- lsp
 	{"neovim/nvim-lspconfig"},
 	{"mason-org/mason.nvim"},
 -- themes
--- {"joshdick/onedark.vim"},
 	{"navarasu/onedark.nvim"},
 	{"marko-cerovac/material.nvim"},
+	{"embark-theme/vim"},
 -- auto complite
 	{"hrsh7th/cmp-nvim-lsp"},
 	{"hrsh7th/cmp-buffer"},

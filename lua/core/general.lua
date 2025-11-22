@@ -26,3 +26,9 @@ vim.opt.scrolloff = 12 --  Количество строк которые ост
 vim.opt.wrap = true -- Включает перенос длинных строк
 vim.wo.linebreak = true -- Включает интеллектуальный перенос строк только в местах где это не ломает слова (например, после пробелов)
 vim.opt.undofile = true -- Сохраняет историю изменений в файл, позволяя отменять действия даже после перезапуска NeoVim. Файлы хранятся в ~/.local/state/nvim/undo/
+
+vim.api.nvim_create_user_command('Ontab', function()
+    local file_path = vim.fn.expand('%:p')
+    vim.cmd('bd')
+    vim.cmd('edit ' .. file_path)
+end, {})

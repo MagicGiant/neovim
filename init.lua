@@ -5,7 +5,8 @@ require('core.keymaps')
 require('core.colors')
 
 -- Plugins
-require('plugins.neotree')
+require('plugins.nvimtree')
+require('plugins.picker')
 require('plugins.treesitter')
 require('plugins.mason')
 require('plugins.lsp')
@@ -14,10 +15,7 @@ require('plugins.gitsings')
 require('plugins.telescope')
 require('plugins.autopairs')
 require('plugins.comment')
--- require('plugins.bufferline')
+require('plugins.bufferline')
+require('plugins.harpoon')
 require('plugins.hop')
 require('plugins.lualine')
--- require('plugins.dashboard')
-
-
-vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)

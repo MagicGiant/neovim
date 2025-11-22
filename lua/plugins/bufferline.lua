@@ -63,7 +63,7 @@ local bufferline = require('bufferline')
 			end,
 			offsets = {
 				{
-					filetype = "neotree",
+					filetype = "NvimTree",
 					text = "File Explorer", --[[ | function , ]]
 					text_align = "center", --| "right",
 					separator = true
@@ -94,7 +94,7 @@ local bufferline = require('bufferline')
 			separator_style = "slope", -- | "slant", "slope" | "thick" | "thin" | { 'any', 'any' },
 			enforce_regular_tabs = false, -- | true,
 			always_show_bufferline = true, -- | false,
-			auto_toggle_bufferline = true, -- | false,
+			auto_toggle_bufferline = false, -- | false,
 			hover = {
 				enabled = true,
 				delay = 200,
@@ -111,4 +111,20 @@ local bufferline = require('bufferline')
 			},
 		}
 	}
+
+
+local closeWindows = "<Cmd>bp | bd #<CR>"
+
+vim.keymap.set("n", "<C-b>ct", closeWindows)
+vim.keymap.set("n", "<C-A-d>", closeWindows)
+vim.keymap.set("n", "<C-b>ch", "<Cmd>BufferLineCloseLeft<CR>")
+vim.keymap.set("n", "<C-b>cl", "<Cmd>BufferLineCloseRight<CR>")
+vim.keymap.set("n", "<C-b>co", "<Cmd>BufferLineCloseOthers<CR>")
+vim.keymap.set("n", "<C-b>p", "<Cmd>BufferLinePick<CR>")
+
+vim.keymap.set("n", "<C-A-h>", "<Cmd>BufferLineMovePrev<CR>")
+vim.keymap.set("n", "<C-A-l>", "<Cmd>BufferLineMoveNext<CR>")
+
+vim.keymap.set("n", "<C-h>", "<Cmd>BufferLineCyclePrev<CR>")
+vim.keymap.set("n", "<C-l>", "<Cmd>BufferLineCycleNext<CR>")
 

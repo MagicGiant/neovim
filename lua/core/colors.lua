@@ -1,5 +1,11 @@
 vim.opt.termguicolors = true
 
+
+function embark()
+	vim.cmd.colorscheme('embark')
+end
+
+
 function navarasu_onedark()
 	require('onedark').setup {
 		style = 'deep',
@@ -96,3 +102,4 @@ end
 
 navarasu_onedark()
 -- nmarko_material()
+-- embark()
