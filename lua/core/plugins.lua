@@ -45,6 +45,8 @@ require("lazy").setup({
     dependencies = { 'nvim-tree/nvim-web-devicons' }
 	},
 	{'hadronized/hop.nvim'},
+	{'lukas-reineke/indent-blankline.nvim'},
+	{'sphamba/smear-cursor.nvim'},
 -- lsp
 	{"neovim/nvim-lspconfig"},
 	{"mason-org/mason.nvim"},

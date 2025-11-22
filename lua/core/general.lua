@@ -32,3 +32,12 @@ vim.api.nvim_create_user_command('Ontab', function()
     vim.cmd('bd')
     vim.cmd('edit ' .. file_path)
 end, {})
+
+vim.api.nvim_create_user_command('CopyPath', function()
+    local path = vim.fn.expand('%:p')
+    vim.fn.jobstart('echo "' .. path .. '" | wl-copy', {
+        on_exit = function()
+            print('Путь скопирован: ' .. path)
+        end
+    })
+end, {})
