@@ -100,6 +100,13 @@ function nmarko_material()
 
 end
 
-navarasu_onedark()
+function everforest ()
+	vim.g.everforest_enable_italic = true
+  vim.cmd.colorscheme('everforest')
+end
+
+-- navarasu_onedark()
 -- nmarko_material()
 -- embark()
+everforest()
+

@@ -1,3 +1,9 @@
+-- отключаю подтверждение при работе через сетевую папку
+
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.writebackup = false
+
 -- табы
 vim.opt.tabstop = 2        -- количество пробелов для отображения таба
 vim.opt.shiftwidth = 2     -- количество пробелов для автоотступов

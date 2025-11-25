@@ -46,14 +46,19 @@ require("lazy").setup({
 	},
 	{'hadronized/hop.nvim'},
 	{'lukas-reineke/indent-blankline.nvim'},
-	{'sphamba/smear-cursor.nvim'},
--- lsp
-	{"neovim/nvim-lspconfig"},
+	-- {'sphamba/smear-cursor.nvim'},
+	{
+		'ggandor/leap.nvim',
+		keys = {'s'}
+	},
+	-- lsp
 	{"mason-org/mason.nvim"},
+	{"neovim/nvim-lspconfig"},
 -- themes
-	{"navarasu/onedark.nvim"},
-	{"marko-cerovac/material.nvim"},
-	{"embark-theme/vim"},
+	-- {"navarasu/onedark.nvim"},
+	-- {"marko-cerovac/material.nvim"},
+	-- {"embark-theme/vim"},
+	{"sainnhe/everforest"},
 -- auto complite
 	{"hrsh7th/cmp-nvim-lsp"},
 	{"hrsh7th/cmp-buffer"},
