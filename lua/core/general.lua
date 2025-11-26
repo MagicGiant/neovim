@@ -1,22 +1,27 @@
--- отключаю подтверждение при работе через сетевую папку
+vim.opt.fillchars = {
+	vert = "▌",
+	horiz = "▁",
+}
 
+-- отключаю подтверждение при работе через сетевую папку
+--
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.writebackup = false
 
 -- табы
-vim.opt.tabstop = 2        -- количество пробелов для отображения таба
-vim.opt.shiftwidth = 2     -- количество пробелов для автоотступов
-vim.opt.softtabstop = 2    -- количество пробелов при редактировании
+vim.opt.tabstop = 2 -- количество пробелов для отображения таба
+vim.opt.shiftwidth = 2 -- количество пробелов для автоотступов
+vim.opt.softtabstop = 2 -- количество пробелов при редактировании
 
 -- нумерация
 vim.wo.number = true
 vim.wo.relativenumber = true
 
 -- Автосохранение при изменении текста
-vim.api.nvim_create_autocmd({"TextChanged", "TextChangedI"}, {
-  pattern = "*",
-	command= "silent! wa"
+vim.api.nvim_create_autocmd({ "TextChanged", "TextChangedI" }, {
+	pattern = "*",
+	command = "silent! wa",
 })
 
 -- Mouse
@@ -33,17 +38,17 @@ vim.opt.wrap = true -- Включает перенос длинных строк
 vim.wo.linebreak = true -- Включает интеллектуальный перенос строк только в местах где это не ломает слова (например, после пробелов)
 vim.opt.undofile = true -- Сохраняет историю изменений в файл, позволяя отменять действия даже после перезапуска NeoVim. Файлы хранятся в ~/.local/state/nvim/undo/
 
-vim.api.nvim_create_user_command('Ontab', function()
-    local file_path = vim.fn.expand('%:p')
-    vim.cmd('bd')
-    vim.cmd('edit ' .. file_path)
+vim.api.nvim_create_user_command("Ontab", function()
+	local file_path = vim.fn.expand("%:p")
+	vim.cmd("bd")
+	vim.cmd("edit " .. file_path)
 end, {})
 
-vim.api.nvim_create_user_command('CopyPath', function()
-    local path = vim.fn.expand('%:p')
-    vim.fn.jobstart('echo "' .. path .. '" | wl-copy', {
-        on_exit = function()
-            print('Путь скопирован: ' .. path)
-        end
-    })
+vim.api.nvim_create_user_command("CopyPath", function()
+	local path = vim.fn.expand("%:p")
+	vim.fn.jobstart('echo "' .. path .. '" | wl-copy', {
+		on_exit = function()
+			print("Путь скопирован: " .. path)
+		end,
+	})
 end, {})

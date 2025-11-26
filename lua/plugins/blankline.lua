@@ -1,5 +1,5 @@
 require("ibl").setup({
 	scope = {
-		enabled = false
-	}
+		enabled = false,
+	},
 })
