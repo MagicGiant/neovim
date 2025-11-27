@@ -3,32 +3,88 @@ vim.opt.fillchars = {
 	horiz = "▁",
 }
 
--- отключаю подтверждение при работе через сетевую папку
---
+-- #ОТКЛЮЧАЮ ПОДТВЕРЖДЕНИЕ ПРИ РАБОТЕ ЧЕРЕЗ СЕТЕВУЮ ПАПКУ
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.writebackup = false
 
--- табы
+-- #ТАБЫ
 vim.opt.tabstop = 2 -- количество пробелов для отображения таба
 vim.opt.shiftwidth = 2 -- количество пробелов для автоотступов
 vim.opt.softtabstop = 2 -- количество пробелов при редактировании
 
--- нумерация
+-- #НУМЕРАЦИЯ
 vim.wo.number = true
 vim.wo.relativenumber = true
 
--- Автосохранение при изменении текста
-vim.api.nvim_create_autocmd({ "TextChanged", "TextChangedI" }, {
-	pattern = "*",
-	command = "silent! wa",
-})
+-- #АВТОСОХРАНЕНИЕ ПРИ ИЗМЕНЕНИИ ТЕКСТА
 
--- Mouse
-vim.opt.mouse = "a"
-vim.opt.mousefocus = true
+local autosave_aucmd_id = nil
 
--- всякое
+local function autosave_on()
+	if autosave_aucmd_id then
+		vim.notify("Автосохранение уже включено")
+		return false
+	end
+
+	autosave_aucmd_id = vim.api.nvim_create_autocmd({ "TextChanged", "TextChangedI" }, {
+		pattern = "*",
+		command = "silent! wa",
+	})
+
+	return true
+end
+
+local function autosave_off()
+	if not autosave_aucmd_id then
+		vim.notify("Автосохранение уже выключено")
+		return false
+	end
+
+	vim.api.nvim_del_autocmd(autosave_aucmd_id)
+	autosave_aucmd_id = nil
+
+	return true
+end
+
+vim.api.nvim_create_user_command("AutosaveOn", function()
+	if autosave_on() then
+		vim.notify("Автосохнанениe включено")
+	end
+end, {})
+
+vim.api.nvim_create_user_command("AutosaveOff", function()
+	if autosave_off() then
+		vim.notify("Автосохранение выключено")
+	end
+end, {})
+
+autosave_on()
+-- #МЫШКА
+
+local function mouse_on()
+	vim.opt.mouse = "a"
+	vim.opt.mousefocus = true
+end
+
+local function mouse_off()
+	vim.opt.mouse = ""
+	vim.opt.mousefocus = false
+end
+
+vim.api.nvim_create_user_command("MouseOn", function()
+	mouse_on()
+	vim.notify("Взаимодействие с мышкой включено")
+end, {})
+
+vim.api.nvim_create_user_command("MouseOff", function()
+	mouse_off()
+	vim.notify("Взаимодействие с мышкой выключено")
+end, {})
+
+mouse_off()
+
+-- #ВСЯКОЕ
 vim.opt.clipboard = "unnamedplus" -- системный буффер обмена для "y"
 -- vim.g.formatoptions = "grn1"
 vim.opt.updatetime = 100 -- Устанавливает задержку в миллисекундах перед записью в swap файл и триггерами CursorHold

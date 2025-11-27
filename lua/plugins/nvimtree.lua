@@ -31,6 +31,23 @@ local function my_on_attach(bufnr)
 	vim.keymap.set("n", "<C-j>", api.node.navigate.sibling.next, opts("Next Sibling"))
 end
 
+local function get_renderer()
+	return {
+		indent_markers = {
+			enable = false,
+			inline_arrows = true,
+			icons = {
+				corner = "└",
+				edge = "│",
+				item = "│",
+				bottom = "─",
+				none = " ",
+			},
+		},
+	}
+end
+
 require("nvim-tree").setup({
 	on_attach = my_on_attach,
+	-- renderer = get_renderer()
 })

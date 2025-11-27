@@ -15,6 +15,11 @@ vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { no
 
 vim.lsp.enable("ts_ls", {
 	root_markers = { "package-lock.json", "package.json", ".git" },
+	settings = {
+		implicitProjectConfiguration = {
+			checkJs = true
+		},
+	}
 })
 vim.lsp.enable("ty")
 

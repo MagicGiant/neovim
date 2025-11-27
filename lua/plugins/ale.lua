@@ -16,4 +16,4 @@ vim.cmd(":ALEDisable")
 
 vim.api.nvim_set_keymap("n", "<leader>l", ":ALEEnable<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>L", ":ALEDisable<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>f", ":ALEFix<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>p", ":ALEFix<CR>", { noremap = true, silent = true })

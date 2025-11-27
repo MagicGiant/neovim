@@ -3,6 +3,8 @@ vim.g.maplocalleader = "\\"
 
 vim.api.nvim_set_keymap("n", "<C-q>", ":wqa<CR>", { noremap = true, silent = true })
 
+vim.api.nvim_set_keymap("n", "<C-s>", ":w<CR>", { noremap = true, silent = true })
+
 -- # РАБОТА С ОКНАМИ
 
 -- размеры

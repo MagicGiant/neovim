@@ -5,13 +5,14 @@ require("core.keymaps")
 require("core.colors")
 
 -- Plugins
+require("plugins.notification")
 require("plugins.nvimtree")
 require("plugins.picker")
 require("plugins.treesitter")
 
 require("plugins.mason")
 require("plugins.lsp")
-require("plugins.ale")
+-- require("plugins.ale")
 
 require("plugins.cmp")
 require("plugins.gitsings")
@@ -26,6 +27,7 @@ require("plugins.blankline")
 require("plugins.leap")
 require("plugins.mason")
 require("plugins.multicursor")
-require('plugins.smear-cursor')
+require("plugins.smear-cursor")
 
--- require('plugins.jsdoc')
+require("plugins.lint")
+require("plugins.conform")

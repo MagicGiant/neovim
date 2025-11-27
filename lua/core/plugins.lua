@@ -55,10 +55,15 @@ require("lazy").setup({
 		"ggandor/leap.nvim",
 		keys = { "s" },
 	},
+	{
+		"rcarriga/nvim-notify",
+	},
 	-- lsp
 	{ "mason-org/mason.nvim" },
 	{ "neovim/nvim-lspconfig" },
-	{ "dense-analysis/ale" },
+	-- { "dense-analysis/ale" },
+	{ "mfussenegger/nvim-lint" },
+	{ "stevearc/conform.nvim" },
 	-- themes
 	-- {"navarasu/onedark.nvim"},
 	-- {"marko-cerovac/material.nvim"},
