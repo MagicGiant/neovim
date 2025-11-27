@@ -104,7 +104,7 @@ vim.api.nvim_create_user_command("CopyPath", function()
 	local path = vim.fn.expand("%:p")
 	vim.fn.jobstart('echo "' .. path .. '" | wl-copy', {
 		on_exit = function()
-			print("Путь скопирован: " .. path)
+			vim.notify("Путь скопирован: " .. path)
 		end,
 	})
 end, {})

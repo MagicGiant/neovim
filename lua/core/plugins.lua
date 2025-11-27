@@ -63,7 +63,12 @@ require("lazy").setup({
 	{ "neovim/nvim-lspconfig" },
 	-- { "dense-analysis/ale" },
 	{ "mfussenegger/nvim-lint" },
+	{"hrsh7th/vim-vsnip"},
 	{ "stevearc/conform.nvim" },
+	{
+    "danymat/neogen",
+    config = true,
+	},
 	-- themes
 	-- {"navarasu/onedark.nvim"},
 	-- {"marko-cerovac/material.nvim"},

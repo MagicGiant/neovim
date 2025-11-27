@@ -12,7 +12,7 @@ require("plugins.treesitter")
 
 require("plugins.mason")
 require("plugins.lsp")
--- require("plugins.ale")
+require("plugins.neogen")
 
 require("plugins.cmp")
 require("plugins.gitsings")
