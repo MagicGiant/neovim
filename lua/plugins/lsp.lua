@@ -1,4 +1,3 @@
--- configs
 -- enable
 vim.lsp.enable("lua_ls")
 -- require('lspconfig').lua_ls.setup({
@@ -25,3 +24,10 @@ vim.lsp.enable("ty")
 
 -- diagnostic
 vim.keymap.set("n", "<leader>k", vim.diagnostic.open_float, { desc = "Show diagnostic" })
+
+
+-- rename
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.rename = {
+    prepareSupport = true,
+}
