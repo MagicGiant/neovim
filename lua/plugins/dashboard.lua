@@ -3,12 +3,16 @@ local function get_header()
 		"",
 		"",
 		"",
+		"",
+		"",
+		"",
 		"░██████╗██╗░░██╗███████╗██████╗░██╗░░██╗░█████╗░░░░██╗░░░██╗██╗███╗░░░███╗",
 		"██╔════╝██║░░██║██╔════╝██╔══██╗██║░██╔╝██╔══██╗░░░██║░░░██║██║████╗░████║",
 		"╚█████╗░███████║█████╗░░██████╔╝█████═╝░███████║░░░╚██╗░██╔╝██║██╔████╔██║",
 		"░╚═══██╗██╔══██║██╔══╝░░██╔══██╗██╔═██╗░██╔══██║░░░░╚████╔╝░██║██║╚██╔╝██║",
 		"██████╔╝██║░░██║███████╗██║░░██║██║░╚██╗██║░░██║██╗░░╚██╔╝░░██║██║░╚═╝░██║",
 		"╚═════╝░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝",
+		"													your vscode is bullshit",
 		"",
 		"",
 		"",
@@ -16,22 +20,30 @@ local function get_header()
 end
 
 require("dashboard").setup({
-	theme = "doom",
-	config = {
-		header = get_header(),
-		center = {
+  theme = 'doom',
+  config = {
+    header =  get_header(), --your header
+    center = {
+      {
+        icon = ' ',
+        icon_hl = 'Title',
+        desc = 'Find File',
+        desc_hl = 'String',
+        key = 'a',
+        keymap = 'SPC f f',
+        key_hl = 'Number',
+        key_format = ' %s', -- remove default surrounding `[]`
+        action = 'Telescope find_files'
+      },
 			{
-				icon = "",
-				icon_hl = "group",
-				desc = "description",
-				desc_hl = "group",
-				key = "shortcut key in dashboard buffer not keymap !!",
-				key_hl = "group",
-				key_format = " [%s]", -- `%s` will be substituted with value of `key`
-				action = "",
-			},
-		},
-		footer = {},
-		vertical_center = false, -- Center the Dashboard on the vertical (from top to bottom)
-	},
-})
+				icon = ' ',
+				icon_hl = 'Title',
+        desc = 'Blow up Microsoft servers',
+        desc_hl = 'String',
+        key = 'b',
+        key_format = ' %s',
+        action = 'Telescope find_files'
+			}
+    },
+    footer = {}  --your footer
+  }})

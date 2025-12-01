@@ -2,6 +2,7 @@ local lint = require('lint')
 
 lint.linters_by_ft = {
 	javascript = {'biomejs'},
+	json = {'biomejs'},
 	lua = {'luacheck'}
 }
 
@@ -14,7 +15,7 @@ local function auto_lint_on ()
 		vim.notify("Автоматический линтинг уже включен")
 		return false
 	end
-	id_lint_autocmd = vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
+	id_lint_autocmd = vim.api.nvim_create_autocmd({ "TextChanged", "TextChangedI" }, {
 		group = lint_augroup,
 		callback = function()
 			lint.try_lint()

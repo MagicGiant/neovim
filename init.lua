@@ -31,3 +31,5 @@ require("plugins.smear-cursor")
 
 require("plugins.lint")
 require("plugins.conform")
+
+require("plugins.dashboard")

@@ -15,12 +15,33 @@ vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { no
 vim.lsp.enable("ts_ls", {
 	root_markers = { "package-lock.json", "package.json", ".git" },
 	settings = {
+		typescript = {
+			suggest = {
+				autoImports = true,
+			},
+      updateImportsOnFileMove = {
+        enabled = "always"
+      },
+      preferences = {
+        includePackageJsonAutoImports = "auto",
+				includeCompletionsForImportStatements = true
+      }
+		},
+    javascript = {
+      suggest = {
+        autoImports = true,
+      },
+      updateImportsOnFileMove = {
+        enabled = "always"
+      }
+    },
 		implicitProjectConfiguration = {
 			checkJs = true
 		},
 	}
 })
 vim.lsp.enable("ty")
+vim.lsp.enable('gopls')
 
 -- diagnostic
 vim.keymap.set("n", "<leader>k", vim.diagnostic.open_float, { desc = "Show diagnostic" })

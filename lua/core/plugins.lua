@@ -69,6 +69,7 @@ require("lazy").setup({
     "danymat/neogen",
     config = true,
 	},
+	{"nvimdev/dashboard-nvim"},
 	-- themes
 	-- {"navarasu/onedark.nvim"},
 	-- {"marko-cerovac/material.nvim"},

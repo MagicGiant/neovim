@@ -25,4 +25,6 @@ checkAndInstall({
 	"typescript-language-server",
 	"biome",
 	"stylua",
+	"luacheck",
+	"gopls"
 })

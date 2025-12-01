@@ -1,5 +1,22 @@
-require("ibl").setup({
+local ibl = require("ibl")
+ibl.setup({
 	scope = {
 		enabled = false,
-	},
+	}
 })
+
+ibl.overwrite{
+	exclude = {
+		filetypes ={
+			"dashboard",
+			"lspinfo",
+			"packer",
+			"checkhealth",
+			"help",
+			"man",
+			"gitcommit",
+			"TelescopePrompt",
+			"TelescopeResult",
+		}
+	}
+}
