@@ -1,3 +1,5 @@
+vim.opt.completeopt = "menu,menuone,noselect"
+
 -- enable
 vim.lsp.enable("lua_ls", {
 	settings = {

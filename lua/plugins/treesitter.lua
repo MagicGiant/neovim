@@ -1,5 +1,19 @@
 require("nvim-treesitter.configs").setup({
 	-- A list of parser names, or "all" (the listed parsers MUST always be installed)
+	textobjects = {
+		move = {
+			enable = true,
+			set_jumps = true, -- whether to set jumps in the jumplist
+			goto_next_start = {
+				["<A-]>"] = "@function.outer",
+				["<A-}>"] = { query = "@class.outer", desc = "Next class start" },
+			},
+			goto_previous_start = {
+				["<A-[>"] = "@function.outer",
+				["<A-{>"] = "@class.outer",
+			},
+		},
+	},
 	ensure_installed = {
 		"c",
 		"lua",
@@ -11,7 +25,7 @@ require("nvim-treesitter.configs").setup({
 		"go",
 		"javascript",
 		"typescript",
-		"jsdoc"
+		"jsdoc",
 	},
 
 	-- Install parsers synchronously (only applied to `ensure_installed`)

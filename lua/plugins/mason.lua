@@ -19,12 +19,13 @@ local checkAndInstall = function(strs)
 end
 
 checkAndInstall({
-	-- lsp 
+	-- lsp
 	"lua-language-server",
 	"ty",
 	"typescript-language-server",
 	"biome",
 	"stylua",
 	"luacheck",
-	"gopls"
+	"gopls",
+	"crlfmt",
 })

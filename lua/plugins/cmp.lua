@@ -17,6 +17,10 @@ cmp.setup({
 			-- require("cmp.config").set_onetime({ sources = {} })
 		end,
 	},
+	-- completion = {
+	-- 	completeopt = "menu,menuone,noselect,noinsert",
+	-- },
+	preselect = cmp.PreselectMode.None,
 	window = {
 		-- completion = cmp.config.window.bordered(),
 		-- documentation = cmp.config.window.bordered(),
