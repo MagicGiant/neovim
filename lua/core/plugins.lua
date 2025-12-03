@@ -35,7 +35,7 @@ require("lazy").setup({
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 	{
-		"jake-stewart/multicursor.nvim"
+		"jake-stewart/multicursor.nvim",
 	},
 	{ "windwp/nvim-autopairs", event = "InsertEnter", config = true },
 	{ "numToStr/Comment.nvim" },
@@ -49,8 +49,8 @@ require("lazy").setup({
 	},
 	{ "hadronized/hop.nvim" },
 	{ "lukas-reineke/indent-blankline.nvim" },
-	{'sphamba/smear-cursor.nvim'},
-	{'heavenshell/vim-jsdoc', opt =  {}},
+	{ "sphamba/smear-cursor.nvim" },
+	{ "heavenshell/vim-jsdoc", opt = {} },
 	{
 		"ggandor/leap.nvim",
 		keys = { "s" },
@@ -61,15 +61,16 @@ require("lazy").setup({
 	-- lsp
 	{ "mason-org/mason.nvim" },
 	{ "neovim/nvim-lspconfig" },
+	-- { "mfussenegger/nvim-dap" },
 	-- { "dense-analysis/ale" },
 	{ "mfussenegger/nvim-lint" },
-	{"hrsh7th/vim-vsnip"},
+	{ "hrsh7th/vim-vsnip" },
 	{ "stevearc/conform.nvim" },
 	{
-    "danymat/neogen",
-    config = true,
+		"danymat/neogen",
+		config = true,
 	},
-	{"nvimdev/dashboard-nvim"},
+	{ "nvimdev/dashboard-nvim" },
 	-- themes
 	-- {"navarasu/onedark.nvim"},
 	-- {"marko-cerovac/material.nvim"},

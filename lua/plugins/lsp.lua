@@ -1,5 +1,19 @@
 -- enable
-vim.lsp.enable("lua_ls")
+vim.lsp.enable("lua_ls", {
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = { "vim" },
+			},
+			workspace = {
+				library = {
+					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
+					[vim.fn.stdpath("config") .. "/lua"] = true,
+				},
+			},
+		},
+	},
+})
 -- require('lspconfig').lua_ls.setup({
 -- 	settings = {
 -- 		Lua = {
@@ -19,36 +33,41 @@ vim.lsp.enable("ts_ls", {
 			suggest = {
 				autoImports = true,
 			},
-      updateImportsOnFileMove = {
-        enabled = "always"
-      },
-      preferences = {
-        includePackageJsonAutoImports = "auto",
-				includeCompletionsForImportStatements = true
-      }
+			updateImportsOnFileMove = {
+				enabled = "always",
+			},
+			preferences = {
+				includePackageJsonAutoImports = "auto",
+				includeCompletionsForImportStatements = true,
+			},
+			include = {
+				"**/*",
+			},
 		},
-    javascript = {
-      suggest = {
-        autoImports = true,
-      },
-      updateImportsOnFileMove = {
-        enabled = "always"
-      }
-    },
+		javascript = {
+			suggest = {
+				autoImports = true,
+			},
+			updateImportsOnFileMove = {
+				enabled = "always",
+			},
+			include = {
+				"**/*",
+			},
+		},
 		implicitProjectConfiguration = {
-			checkJs = true
+			checkJs = true,
 		},
-	}
+	},
 })
 vim.lsp.enable("ty")
-vim.lsp.enable('gopls')
+vim.lsp.enable("gopls")
 
 -- diagnostic
 vim.keymap.set("n", "<leader>k", vim.diagnostic.open_float, { desc = "Show diagnostic" })
 
-
 -- rename
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.rename = {
-    prepareSupport = true,
+	prepareSupport = true,
 }

@@ -27,7 +27,7 @@ local function autosave_on()
 		return false
 	end
 
-	autosave_aucmd_id = vim.api.nvim_create_autocmd({ "TextChanged", "TextChangedI" }, {
+	autosave_aucmd_id = vim.api.nvim_create_autocmd({ "InsertLeave", "TextYankPost" }, {
 		pattern = "*",
 		command = "silent! wa",
 	})
@@ -59,7 +59,7 @@ vim.api.nvim_create_user_command("AutosaveOff", function()
 	end
 end, {})
 
-autosave_on()
+-- autosave_on()
 -- #МЫШКА
 
 local function mouse_on()
