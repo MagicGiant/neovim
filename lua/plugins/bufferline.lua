@@ -112,14 +112,14 @@ bufferline.setup({
 	},
 })
 
-local closeWindows = "<Cmd>bp | bd #<CR>"
+local closeWindows = "<Cmd>wa | bp | bd #<CR>"
 
 vim.keymap.set("n", "<C-x>ct", closeWindows)
 vim.keymap.set("n", "<C-A-d>", closeWindows)
-vim.keymap.set("n", "<C-x>ch", "<Cmd>BufferLineCloseLeft<CR>")
-vim.keymap.set("n", "<C-x>cl", "<Cmd>BufferLineCloseRight<CR>")
-vim.keymap.set("n", "<C-x>co", "<Cmd>BufferLineCloseOthers<CR>")
-vim.keymap.set("n", "<C-x>p", "<Cmd>BufferLinePick<CR>")
+vim.keymap.set("n", "<C-x>ch", "<Cmd>wa | BufferLineCloseLeft<CR>")
+vim.keymap.set("n", "<C-x>cl", "<Cmd>wa | BufferLineCloseRight<CR>")
+vim.keymap.set("n", "<C-x>co", "<Cmd>wa | BufferLineCloseOthers<CR>")
+vim.keymap.set("n", "<C-x>p", "<Cmd>wa | BufferLinePick<CR>")
 
 vim.keymap.set("n", "<C-A-h>", "<Cmd>BufferLineMovePrev<CR>")
 vim.keymap.set("n", "<C-A-l>", "<Cmd>BufferLineMoveNext<CR>")

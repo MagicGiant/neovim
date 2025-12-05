@@ -4,9 +4,9 @@ mc.setup()
 local set = vim.keymap.set
 
 -- Add or skip cursor above/below the main cursor.
-set({ "n", "x" }, "<S-k>", function()
-	mc.lineAddCursor(-1)
-end)
+-- set({ "n", "x" }, "<S-k>", function()
+-- 	mc.lineAddCursor(-1)
+-- end)
 set({ "n", "x" }, "<S-j>", function()
 	mc.lineAddCursor(1)
 end)

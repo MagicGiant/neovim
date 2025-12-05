@@ -41,6 +41,22 @@ cmp.setup({
 	}, {
 		{ name = "buffer" },
 	}),
+	sorting = {
+		comparators = {
+			-- 1. Сначала сравниваем по типу элемента (kind)
+			cmp.config.compare.kind,
+			-- 2. Можно добавить сравнение по порядку в источнике
+			cmp.config.compare.sort_text,
+			-- 3. Сравниваем по алфавиту (это стандартный компаратор)
+			cmp.config.compare.exact,
+			cmp.config.compare.score,
+			cmp.config.compare.recently_used,
+			cmp.config.compare.locality,
+			cmp.config.compare.offset,
+			cmp.config.compare.length,
+			cmp.config.compare.order,
+		},
+	},
 })
 
 -- To use git you need to install the plugin petertriho/cmp-git and uncomment lines below
