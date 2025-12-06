@@ -1,3 +1,5 @@
+vim = vim
+
 vim.opt.fillchars = {
 	vert = "▌",
 	horiz = "▁",
@@ -7,6 +9,36 @@ vim.opt.fillchars = {
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.writebackup = false
+
+-- #ДИАГНОСТИКА
+
+vim.diagnostic.config({
+	virtual_text = {
+		source = "if_many", -- Показывать источник ошибки, если диагностик много
+		severity = {
+			min = vim.diagnostic.severity.HINT, -- Показывать предупреждения и ошибки
+		},
+		format = function(diagnostic)
+			local icons = {
+				[vim.diagnostic.severity.ERROR] = " ",
+				[vim.diagnostic.severity.WARN] = " ",
+				[vim.diagnostic.severity.INFO] = " ",
+				[vim.diagnostic.severity.HINT] = "󰌶 ",
+			}
+			local icon = icons[diagnostic.severity] or ""
+			return icon .. diagnostic.message
+		end,
+		-- Разместить текст справа
+		prefix = "",
+		suffix = " ",
+	},
+	underline = true, -- Подчёркивание проблемного кода
+	signs = true, -- Значки на полях
+	float = { -- Всплывающее окно по запросу
+		-- 	border = "rounded",
+		source = "always",
+	},
+})
 
 -- #ТАБЫ
 vim.opt.tabstop = 2 -- количество пробелов для отображения таба
