@@ -28,4 +28,5 @@ checkAndInstall({
 	"luacheck",
 	"gopls",
 	"crlfmt",
+	"htmx-lsp",
 })
