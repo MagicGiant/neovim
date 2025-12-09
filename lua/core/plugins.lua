@@ -62,8 +62,11 @@ require("lazy").setup({
 	-- lsp
 	{ "mason-org/mason.nvim" },
 	{ "neovim/nvim-lspconfig" },
-	-- { "mfussenegger/nvim-dap" },
+	{ "mfussenegger/nvim-dap" },
+	-- { "nvim-neotest/nvim-nio" },
+	-- { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
 	-- { "dense-analysis/ale" },
+	{ "puremourning/vimspector" },
 	{ "mfussenegger/nvim-lint" },
 	{ "hrsh7th/vim-vsnip" },
 	{ "stevearc/conform.nvim" },

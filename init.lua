@@ -32,4 +32,5 @@ require("plugins.smear-cursor")
 require("plugins.lint")
 require("plugins.conform")
 
+require("plugins.vimspector")
 -- require("plugins.dashboard")
