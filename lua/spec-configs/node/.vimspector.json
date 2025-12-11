@@ -1,0 +1,19 @@
+{
+  "configurations": {
+    "run - js-debug": {
+      "adapter": "js-debug",
+      "configuration": {
+        "request": "launch",
+        "program": "${workspaceRoot}/main.js",
+        "cwd": "${workspaceRoot}",
+        "stopOnEntry": false
+      },
+      "breakpoints": {
+        "exception": {
+          "all": "",
+          "uncaught": ""
+        }
+      }
+    }
+  }
+}
