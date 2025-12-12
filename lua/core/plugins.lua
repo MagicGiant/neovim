@@ -41,7 +41,7 @@ require("lazy").setup({
 	{ "windwp/nvim-autopairs", event = "InsertEnter", config = true },
 	{ "numToStr/Comment.nvim" },
 	{ "windwp/nvim-ts-autotag" },
-	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
+	-- { "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
 	{ "nvim-lua/plenary.nvim" },
 	{ "ThePrimeagen/harpoon", dependencies = { "nvim-lua/plenary.nvim" } },
 	{

@@ -64,6 +64,7 @@ vim.lsp.enable("ts_ls", {
 })
 vim.lsp.enable("ty")
 vim.lsp.enable("gopls")
+vim.lsp.enable("bashls")
 
 -- diagnostic
 vim.keymap.set("n", "<leader>k", vim.diagnostic.open_float, { desc = "Show diagnostic" })
