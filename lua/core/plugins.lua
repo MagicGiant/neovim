@@ -29,7 +29,7 @@ require("lazy").setup({
 		"s1n7ax/nvim-window-picker",
 		version = "2.*",
 	},
-	{ "nvim-treesitter/nvim-treesitter" },
+	{ "nvim-treesitter/nvim-treesitter", branch = "main" },
 	{ "nvim-treesitter/nvim-treesitter-textobjects", dependencies = { "nvim-treesitter/nvim-treesitter" } },
 	{
 		"nvim-telescope/telescope.nvim",
@@ -59,11 +59,44 @@ require("lazy").setup({
 	{
 		"rcarriga/nvim-notify",
 	},
+	{
+		"tpope/vim-surround",
+	},
+	{
+		"antoinemadec/FixCursorHold.nvim",
+	},
+	-- tests
+	{ "nvim-neotest/nvim-nio" },
+	-- {
+	-- 	"nvim-neotest/neotest-go",
+	-- },
+	-- {
+	-- 	"fredrikaverpil/neotest-golang",
+	-- 	version = "*", -- Optional, but recommended; track releases
+	-- 	build = function()
+	-- 		vim.system({ "go", "install", "gotest.tools/gotestsum@latest" }):wait() -- Optional, but recommended
+	-- 	end,
+	-- },
+	-- {
+	-- 	"nvim-neotest/neotest",
+	-- 	dependencies = {
+	-- 		"nvim-neotest/nvim-nio",
+	-- 		"nvim-lua/plenary.nvim",
+	-- 		"antoinemadec/FixCursorHold.nvim",
+	-- 		"nvim-treesitter/nvim-treesitter",
+	-- 	},
+	-- },
+	-- {
+	-- 	"fredrikaverpil/neotest-golang",
+	-- 	version = "*", -- Optional, but recommended; track releases
+	-- 	build = function()
+	-- 		vim.system({ "go", "install", "gotest.tools/gotestsum@latest" }):wait() -- Optional, but recommended
+	-- 	end,
+	-- },
 	-- lsp
 	{ "mason-org/mason.nvim" },
 	{ "neovim/nvim-lspconfig" },
 	{ "mfussenegger/nvim-dap" },
-	-- { "nvim-neotest/nvim-nio" },
 	-- { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
 	-- { "dense-analysis/ale" },
 	{ "puremourning/vimspector" },
