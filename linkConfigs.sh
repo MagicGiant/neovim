@@ -1,7 +1,3 @@
-ln -snf "$(pwd)/lua/configs/tmux/.tmux.conf" ~/.tmux.conf
-ln -snf "$(pwd)/lua/configs/zsh/.zshrc" ~/.zshrc
-ln -snf "$(pwd)" ~/.config/nvim
-
-# -s: символическая ссылка.
-# -n: не разыменовывать существующий симлинк (не заходить внутрь него).
-# -f: удалить старую ссылку перед созданием новой.
+ln -snf "$(pwd)/source/tmux/.tmux.conf" ~/.tmux.conf
+ln -snf "$(pwd)/source/zsh/.zshrc" ~/.zshrc
+ln -snf "$(pwd)/source/nvim" ~/.config/nvim
