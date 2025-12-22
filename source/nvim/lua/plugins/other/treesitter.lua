@@ -1,20 +1,6 @@
 local function config()
-	require("nvim-treesitter.configs").setup({
+	require("nvim-treesitter").setup({
 		-- A list of parser names, or "all" (the listed parsers MUST always be installed)
-		textobjects = {
-			move = {
-				enable = true,
-				set_jumps = true, -- whether to set jumps in the jumplist
-				goto_next_start = {
-					["<A-]>"] = "@function.outer",
-					["<A-}>"] = { query = "@class.outer", desc = "Next class start" },
-				},
-				goto_previous_start = {
-					["<A-[>"] = "@function.outer",
-					["<A-{>"] = "@class.outer",
-				},
-			},
-		},
 		ensure_installed = {
 			"c",
 			"lua",
@@ -27,6 +13,8 @@ local function config()
 			"javascript",
 			"typescript",
 			"jsdoc",
+			"latex",
+			"html",
 		},
 
 		-- Install parsers synchronously (only applied to `ensure_installed`)
@@ -66,14 +54,19 @@ local function config()
 			additional_vim_regex_highlighting = false,
 		},
 	})
+
+	vim.api.nvim_create_autocmd("FileType", {
+		pattern = "markdown",
+		callback = function()
+			vim.treesitter.start()
+		end,
+	})
 end
 
 return {
-	{ "nvim-treesitter/nvim-treesitter-textobjects" },
 	{
 		"nvim-treesitter/nvim-treesitter",
 		branch = "main",
-		dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
 		config = config,
 	},
 }
