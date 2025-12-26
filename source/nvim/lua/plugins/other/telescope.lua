@@ -9,17 +9,12 @@ local function config()
 end
 
 return {
-	{
-		"nvim-lua/plenary.nvim",
-	},
-	{
-		"nvim-telescope/telescope.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		config = config,
-		opts = {
-			defaults = {
-				file_ignore_patterns = { "^node_modules/" },
-			},
+	"nvim-telescope/telescope.nvim",
+	dependencies = { "nvim-lua/plenary.nvim" },
+	config = config,
+	opts = {
+		defaults = {
+			file_ignore_patterns = { "^node_modules/" },
 		},
 	},
 }

@@ -58,10 +58,7 @@ local function config()
 end
 
 return {
-	{ "nvim-lua/plenary.nvim" },
-	{
-		"ThePrimeagen/harpoon",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		config = config,
-	},
+	"ThePrimeagen/harpoon",
+	dependencies = { "nvim-lua/plenary.nvim" },
+	config = config,
 }

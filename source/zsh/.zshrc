@@ -115,3 +115,4 @@ source $ZSH/oh-my-zsh.sh
 source /usr/share/nvm/init-nvm.sh
 
 export PATH="$PATH:/home/sherka/.local/bin"
+export PATH="$PATH:/home/sherka/MyDirect/bin"

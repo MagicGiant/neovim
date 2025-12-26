@@ -1,5 +1,5 @@
 local function config()
-	require("nvim-treesitter").setup({
+	require("nvim-treesitter.configs").setup({
 		-- A list of parser names, or "all" (the listed parsers MUST always be installed)
 		ensure_installed = {
 			"c",
@@ -64,9 +64,8 @@ local function config()
 end
 
 return {
-	{
-		"nvim-treesitter/nvim-treesitter",
-		branch = "main",
-		config = config,
-	},
+	"nvim-treesitter/nvim-treesitter",
+	branch = "main",
+	config = config,
+	version = "0.9.3",
 }
