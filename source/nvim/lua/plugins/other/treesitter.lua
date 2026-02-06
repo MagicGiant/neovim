@@ -13,7 +13,6 @@ local function config()
 			"javascript",
 			"typescript",
 			"jsdoc",
-			"latex",
 			"html",
 		},
 

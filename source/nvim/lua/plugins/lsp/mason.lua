@@ -30,6 +30,8 @@ local function config()
 		"gopls",
 		"crlfmt",
 		"htmx-lsp",
+		"html-lsp",
+		"prettydiff",
 	})
 end
 

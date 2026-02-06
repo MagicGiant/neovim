@@ -48,12 +48,32 @@ local function config()
 	})
 end
 
+local function deviconsConfig()
+	require("nvim-web-devicons").setup({
+		override = {
+			handlebars = {
+				icon = "H",
+				color = "#F0772B",
+				name = "Handlebars",
+			},
+			ejs = {
+				icon = "E",
+				color = "#F0772B",
+				name = "ejs",
+			},
+		},
+	})
+end
+
 return {
 	"nvim-tree/nvim-tree.lua",
 	version = "*",
 	lazy = false,
 	dependencies = {
-		"nvim-tree/nvim-web-devicons",
+		{
+			"nvim-tree/nvim-web-devicons",
+			config = deviconsConfig,
+		},
 	},
 	config = config,
 	-- enabled = false,

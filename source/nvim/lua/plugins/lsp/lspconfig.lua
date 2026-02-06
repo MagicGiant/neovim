@@ -66,6 +66,15 @@ local function config()
 	vim.lsp.enable("ty")
 	vim.lsp.enable("gopls")
 	vim.lsp.enable("bashls")
+	vim.lsp.enable("html", {
+		filetypes = {
+			"html",
+			"handlebars",
+			"ejs",
+		},
+	})
+	vim.lsp.enable("cssls")
+	vim.lsp.enable("docker_compose_language_service")
 
 	-- diagnostic
 	vim.keymap.set("n", "<leader>k", vim.diagnostic.open_float, { desc = "Show diagnostic" })

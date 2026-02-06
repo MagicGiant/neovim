@@ -140,3 +140,12 @@ vim.api.nvim_create_user_command("CopyPath", function()
 		end,
 	})
 end, {})
+
+--- filetypes
+
+vim.filetype.add({
+	extension = {
+		handlebars = "html.handlebars",
+		ejs = "html",
+	},
+})

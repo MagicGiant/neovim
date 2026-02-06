@@ -3,6 +3,7 @@ local function config()
 
 	conform.setup({
 		formatters_by_ft = {
+			html = { "prettydiff" },
 			lua = { "stylua" },
 			javascript = { "biome" },
 			json = { "biome" },
