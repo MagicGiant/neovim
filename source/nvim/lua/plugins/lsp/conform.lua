@@ -6,6 +6,7 @@ local function config()
 			html = { "prettydiff" },
 			lua = { "stylua" },
 			javascript = { "biome" },
+			typescript = { "biome" },
 			json = { "biome" },
 			go = { "gofmt" },
 		},

@@ -1,0 +1,10 @@
+{
+	"name": "ts-start",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"start": "npm run build && node ./build/main.js",
+		"build": "tsc"
+	},
+	"license": "ISC"
+}

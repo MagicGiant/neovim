@@ -1,11 +1,12 @@
 {
-  "name": "main",
-  "version": "1.0.0",
-  "main": "main.js",
-  "scripts": {
-    "start": "node main.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": ""
+	"name": "main",
+	"version": "1.0.0",
+	"main": "main.js",
+	"type": "module",
+	"scripts": {
+		"start": "node main.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"description": ""
 }
