@@ -1,0 +1,25 @@
+{
+  "Power Menu": [
+    {
+      "name": "Shutdown",
+      "exec": "shutdown -P now",
+      "description": "System shutdown.",
+    },
+    {
+      "name": "Sleep",
+      "exec": "shutdown -H now",
+      "description": "System sleep.",
+    },
+    {
+      "name": "Reboot",
+      "exec": "shutdown -r now",
+      "description": "System reboot.",
+    },
+    {
+      "name": "List scheduled shutdown.",
+      "exec": "shutdown --show",
+      "description": "List scheduled shutdown.",
+      "terminal": true
+    }
+  ]
+}

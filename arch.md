@@ -14,12 +14,12 @@ makepkg -si
 ## Необходимые пакеты
 
 ```sh
-yay -S git cmake extra-cmake-modules base-devel qt5-tools cargo unzip
+yay -S git cmake extra-cmake-modules base-devel qt5-tools cargo unzip nvm luarocks python-pip
 ```
 
 ## Установка приложений
 ```sh
-yay -S partitionmanager rar exfatprogs obs-studio crow-translater flameshot-git jdk-openjdk sing-geoip-db sing-geosite-db telegram-desktop-bin termite cava steam zoom onlyoffice-bin loupe visual-studio-code-bin  zsh fastfetch playerctl
+yay -S jiffy partitionmanager rar exfatprogs obs-studio crow-translater flameshot-git jdk-openjdk sing-geoip-db sing-geosite-db telegram-desktop-bin termite cava steam zoom onlyoffice-bin loupe visual-studio-code-bin  zsh fastfetch playerctl
 
 ```
 
@@ -27,7 +27,7 @@ yay -S partitionmanager rar exfatprogs obs-studio crow-translater flameshot-git 
 
 ```sh
 yay -S noto-fonts-cjk adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts wqy-microhei
-sudo nano /etc/locale.gen
+sudo vim /etc/locale.gen
 ```
 
 раскомментировать:
