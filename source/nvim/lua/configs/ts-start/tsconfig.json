@@ -1,11 +1,14 @@
 {
 	"compilerOptions": {
+    "resolveJsonModule": true,
 		"target": "es2024",
 		"module": "commonjs",
 		"removeComments": true,
-    "outDir": "build"
+    "outDir": "build",
+    "esModuleInterop": true,
 	},
 	"exclude": [
 		"node_modules"
 	]
 }
+
