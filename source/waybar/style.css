@@ -1,6 +1,8 @@
 @define-color border-color #404040;
 @define-color bg-base #B1B1B1;
 @define-color bg-object #EAEAEA;
+@define-color active-color #D08770;
+
 
 * {
 	border: none;
@@ -20,26 +22,51 @@ window#waybar {
 	background-clip: padding-box;
 }
 
-
-.modules-right, #clock , #workspaces button {
+#language, #group-pulseaudio, #group-backlight, #group-power, #allview, #clock, #workspaces button {
 	margin: 9px 0px 9px 9px;
 	border: 3px solid @border-color;
 	border-radius: 10px;
 	background-color: @bg-object;
 }
 
-.modules-right {
-	margin-right: 9px
+#custom-power, #custom-quit, #custom-lock, #custom-reboot {
+	margin-left: 9px;
+	font-weight: 800;
+	font-size: 19px;
 }
 
 #workspaces button.active {
 	border-radius: 50px;
 }
 
-#network, #pulseaudio, #bluetooth {
+#network, #bluetooth {
 	margin-left: 9px;
+	/* min-width:  70px; */
 	padding-right: 9px;
 	border-right: 3px solid @border-color;
+}
+
+#pulseaudio, #backlight, #custom-backlight, #custom-power, .modules-right {
+	margin-right: 9px;
+}
+
+#pulseaudio-slider slider, #backlight-slider slider {
+	background: @border-color;
+}
+
+#pulseaudio-slider trough, #backlight-slider trough {
+	min-width: 100px;
+	margin-left: 9px;
+	min-height: 10px;
+	background: @background-color;
+}
+
+#pulseaudio-slider highlight, #backlight-slider highlight {
+	background: @bg-base;
+}
+
+#pulseaudio, #backlight, #custom-backlight {
+	margin-left: 9px;
 }
 
 #battery {
@@ -47,7 +74,7 @@ window#waybar {
 	margin-right: 9px;
 }
 
-#clock{
+#language, #clock{
 	padding-left: 9px;
 	padding-right: 9px;
 }
