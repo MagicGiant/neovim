@@ -74,7 +74,15 @@ local function config()
 		},
 	})
 	vim.lsp.enable("cssls")
-	vim.lsp.enable("docker_compose_language_service")
+
+	vim.lsp.enable("docker_compose_language_service", {
+		cmd = { "docker-compose-langserver", "--stdio" },
+		filetypes = { "yaml" },
+		root_markers = {
+			"docker-compose.yaml",
+			"compose.yaml",
+		},
+	})
 
 	-- diagnostic
 	vim.keymap.set("n", "<leader>k", vim.diagnostic.open_float, { desc = "Show diagnostic" })
