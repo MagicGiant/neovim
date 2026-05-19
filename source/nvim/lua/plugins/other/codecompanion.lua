@@ -13,20 +13,22 @@ return {
 	config = function()
 		require("codecompanion").setup({
 			adapters = {
-				http = {
-					ollama = function()
-						return require("codecompanion.adapters").extend("ollama", {
-							env = {
-								url = "https://my_ollama_url",
+				ollama = function()
+					return require("codecompanion.adapters").extend("ollama", {
+						schema = {
+							model = {
+								default = "llama3.2", -- or your preferred model
 							},
-							headers = {
-								["Content-Type"] = "application/json",
-							},
-							parameters = {
-								sync = true,
-							},
-						})
-					end,
+						},
+					})
+				end,
+			},
+			strategies = {
+				chat = {
+					adapter = "ollama",
+				},
+				inline = {
+					adapter = "ollama",
 				},
 			},
 		})
