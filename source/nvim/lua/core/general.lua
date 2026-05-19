@@ -1,7 +1,7 @@
 vim = vim
 
 vim.opt.fillchars = {
-	vert = "▌",
+	-- vert = "▎",
 	horiz = "▁",
 }
 
