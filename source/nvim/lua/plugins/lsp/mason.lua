@@ -26,7 +26,7 @@ local function config()
 		"typescript-language-server",
 		"biome",
 		"stylua",
-		"luacheck",
+		-- "luacheck",
 		"gopls",
 		"crlfmt",
 		"htmx-lsp",
