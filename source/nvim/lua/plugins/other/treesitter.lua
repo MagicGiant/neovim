@@ -1,25 +1,25 @@
 local function config()
-	local ensureInstalled = {
-		"c",
-		"lua",
-		"vim",
-		"vimdoc",
-		"query",
-		-- "markdown",
-		-- "markdown_inline",
-		"go",
-		"javascript",
-		"typescript",
-		"jsdoc",
-		"html",
-	}
-	local alreadyInstalled = require("nvim-treesitter.config").get_installed()
-	local parsersToInstall = vim.iter(ensureInstalled)
-		:filter(function(parser)
-			return not vim.tbl_contains(alreadyInstalled, parser)
-		end)
-		:totable()
-	require("nvim-treesitter").install(parsersToInstall)
+	-- local ensureInstalled = {
+	-- 	"c",
+	-- 	"lua",
+	-- 	"vim",
+	-- 	"vimdoc",
+	-- 	"query",
+	-- 	-- "markdown",
+	-- 	-- "markdown_inline",
+	-- 	"go",
+	-- 	"javascript",
+	-- 	"typescript",
+	-- 	"jsdoc",
+	-- 	"html",
+	-- }
+	-- local alreadyInstalled = require("nvim-treesitter").get_installed()
+	-- local parsersToInstall = vim.iter(ensureInstalled)
+	-- 	:filter(function(parser)
+	-- 		return not vim.tbl_contains(alreadyInstalled, parser)
+	-- 	end)
+	-- 	:totable()
+	-- require("nvim-treesitter").install(parsersToInstall)
 
 	vim.api.nvim_create_autocmd("FileType", {
 		pattern = "markdown",
@@ -42,5 +42,4 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	branch = "main",
 	config = config,
-	version = "0.9.3",
 }
