@@ -6,6 +6,7 @@ local function config()
 	vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 	vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 	vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, { desc = "Telescope docs symbols" })
+	vim.api.nvim_set_keymap("n", "<leader>fc", ":CodeCompanionActions<CR>", { noremap = true, silent = true })
 end
 
 return {
