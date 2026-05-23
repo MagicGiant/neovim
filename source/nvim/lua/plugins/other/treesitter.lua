@@ -5,8 +5,13 @@ local function config()
 		"vim",
 		"vimdoc",
 		"query",
+<<<<<<< HEAD
 		"markdown",
 		"markdown_inline",
+=======
+		-- "markdown",
+		-- "markdown_inline",
+>>>>>>> 37c4fe8 (changes)
 		"go",
 		"javascript",
 		"typescript",

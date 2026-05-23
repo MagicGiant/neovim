@@ -1,7 +1,7 @@
 local function config()
 	require("render-markdown").setup({
 		-- Whether markdown should be rendered by default.
-		enabled = true,
+		-- enabled = true,
 		-- Vim modes that will show a rendered view of the markdown file, :h mode(), for all enabled
 		-- components. Individual components can be enabled for other modes. Remaining modes will be
 		-- unaffected by this plugin.

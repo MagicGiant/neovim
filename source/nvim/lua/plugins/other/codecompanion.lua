@@ -33,9 +33,6 @@ return {
 				cli = {
 					adapter = "ollama",
 				},
-				cmd = {
-					adapter = "ollama",
-				},
 			},
 		})
 	end,
