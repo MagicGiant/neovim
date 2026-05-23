@@ -17,7 +17,7 @@ return {
 					return require("codecompanion.adapters").extend("ollama", {
 						schema = {
 							model = {
-								default = "llama3.2", -- or your preferred model
+								default = "qwen2.5-coder:7b-instruct", -- or your preferred model
 							},
 						},
 					})
