@@ -27,3 +27,8 @@ vim.cmd("nnoremap <A-h> <C-w>h")
 vim.cmd("nnoremap <A-j> <C-w>j")
 vim.cmd("nnoremap <A-k> <C-w>k")
 vim.cmd("nnoremap <A-l> <C-w>l")
+
+vim.cmd("nnoremap <A-C-K> <C-w>K")
+vim.cmd("nnoremap <A-C-J> <C-w>J")
+vim.cmd("nnoremap <A-C-H> <C-w>H")
+vim.cmd("nnoremap <A-C-L> <C-w>L")
