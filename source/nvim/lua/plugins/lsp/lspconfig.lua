@@ -84,6 +84,11 @@ local function config()
 		},
 	})
 
+	vim.opt.smartindent = true
+	vim.opt.autoindent = true
+	vim.lsp.enable("kotlin_lsp")
+	-- vim.lsp.enable("kotlin_language_server")
+
 	-- diagnostic
 	vim.keymap.set("n", "<leader>k", vim.diagnostic.open_float, { desc = "Show diagnostic" })
 

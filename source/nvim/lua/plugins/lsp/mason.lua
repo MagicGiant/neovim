@@ -27,6 +27,7 @@ local function config()
 		"biome",
 		"stylua",
 		-- "luacheck",
+		"kotlin-lsp",
 		"gopls",
 		"crlfmt",
 		"htmx-lsp",

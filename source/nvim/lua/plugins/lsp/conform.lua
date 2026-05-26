@@ -9,6 +9,7 @@ local function config()
 			typescript = { "biome" },
 			json = { "biome" },
 			go = { "gofmt" },
+			kotlin = { "ktfmt" },
 		},
 	})
 
