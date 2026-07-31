@@ -13,26 +13,22 @@ return {
 	config = function()
 		require("codecompanion").setup({
 			adapters = {
-				ollama = function()
-					return require("codecompanion.adapters").extend("ollama", {
+				deepseek = function()
+					return require("codecompanion.adapters").extend("deepseek", {
 						schema = {
 							model = {
-								default = "qwen2.5-coder:7b-instruct", -- or your preferred model
+								default = "deepseek-v4-flash", -- или "deepseek-v4-pro"
+							},
+							max_tokens = {
+								default = 384000, -- Максимальный вывод для v4
 							},
 						},
 					})
 				end,
 			},
 			strategies = {
-				chat = {
-					adapter = "ollama",
-				},
-				inline = {
-					adapter = "ollama",
-				},
-				cli = {
-					adapter = "ollama",
-				},
+				chat = { adapter = "deepseek" },
+				inline = { adapter = "deepseek" },
 			},
 		})
 	end,
