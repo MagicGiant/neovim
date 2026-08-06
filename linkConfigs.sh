@@ -5,3 +5,4 @@ rm -rf ~/.config/hypr && ln -snf "$(pwd)/source/hypr" ~/.config/hypr
 rm -rf ~/.config/jiffy && ln -snf "$(pwd)/source/jiffy" ~/.config/jiffy
 rm -rf ~/.config/kitty && ln -snf "$(pwd)/source/kitty" ~/.config/kitty
 rm -rf ~/.config/waybar && ln -snf "$(pwd)/source/waybar" ~/.config/waybar
+rm -rf ~/.config/mouseless && ln -snf "$(pwd)/source/mouseless" ~/.config/mouseless

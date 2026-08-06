@@ -19,7 +19,7 @@ yay -S git cmake extra-cmake-modules base-devel qt5-tools cargo unzip nvm luaroc
 
 ## Установка приложений
 ```sh
-yay -S jiffy partitionmanager rar exfatprogs obs-studio crow-translater flameshot-git jdk-openjdk sing-geoip-db sing-geosite-db telegram-desktop-bin termite cava steam zoom onlyoffice-bin loupe visual-studio-code-bin  zsh fastfetch playerctl
+yay -S jiffy partitionmanager rar exfatprogs obs-studio crow-translater flameshot-git jdk-openjdk sing-geoip-db sing-geosite-db telegram-desktop-bin termite cava steam zoom onlyoffice-bin loupe visual-studio-code-bin  zsh fastfetch playerctl mouseless
 
 ```
 
@@ -104,4 +104,26 @@ cd Graphite-kde-theme
 
 ```sh
 playerctl position 5+
+```
+
+## Mouseless
+
+```sh
+sudo tee /etc/systemd/system/mouseless.service <<EOF
+[Unit]
+Description=mouseless
+
+[Service]
+Type=simple
+ExecStart=mouseless --config /home/sherka/.config/mouseless/config.yaml
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
+```
+sudo systemctl enable mouseless.service
+sudo systemctl start mouseless.service
+sudo systemctl status mouseless.service
 ```
