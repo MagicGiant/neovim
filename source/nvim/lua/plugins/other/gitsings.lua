@@ -49,8 +49,15 @@ function config()
 		},
 	})
 
-	vim.api.nvim_set_keymap("n", "<leader>gd", ":Gitsigns diffthis<cr>", { noremap = true, silent = true })
+	vim.api.nvim_set_keymap("n", "<leader>gt", ":Gitsigns diffthis<cr>", { noremap = true, silent = true })
+	vim.api.nvim_set_keymap("n", "<leader>gT", ":Gitsigns toggle_deleted<cr>", { noremap = true, silent = true })
 	vim.api.nvim_set_keymap("n", "<leader>gw", ":Gitsigns blame<cr>", { noremap = true, silent = true })
+	vim.api.nvim_set_keymap(
+		"n",
+		"<leader>gW",
+		":Gitsigns toggle_current_line_blame<cr>",
+		{ noremap = true, silent = true }
+	)
 end
 
 return {
