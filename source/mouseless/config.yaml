@@ -23,3 +23,7 @@ layers:
     j: down
     k: up
     l: right
+    o: multi end; enter
+    b: leftctrl+left
+    leftshift+k4: end
+    k0: home
