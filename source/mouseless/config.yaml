@@ -16,6 +16,7 @@ layers:
     p: scroll up
     n: scroll down
     leftalt: speed 0.3
+    capslock: speed 3 
     m: button left
     comma: button right
     h: left

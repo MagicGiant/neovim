@@ -47,25 +47,27 @@ local function config()
 		}),
 		sorting = {
 			comparators = {
-				-- 1. Сначала сравниваем по типу элемента: 'Text' всегда идет последним
+				cmp.config.compare.exact,
+				cmp.config.compare.score,
+				cmp.config.compare.sort_text,
+				cmp.config.compare.locality,
+				cmp.config.compare.length,
+				cmp.config.compare.kind,
 				function(entry1, entry2)
 					local kind1 = entry1:get_kind()
 					local kind2 = entry2:get_kind()
 					if kind1 == kind2 then
 						return nil
-					end -- передаем следующему компаратору
-
+					end
 					if kind1 == cmp.lsp.CompletionItemKind.Text then
-						-- Если первый элемент - текст, он должен идти ПОСЛЕ (возвращаем true)
 						return false
 					end
 					if kind2 == cmp.lsp.CompletionItemKind.Text then
-						-- Если второй элемент - текст, он должен идти ПОСЛЕ (возвращаем false)
 						return true
 					end
-					-- Для всех остальных типов оставляем исходный порядок (nil)
 					return nil
 				end,
+				cmp.config.compare.order,
 			},
 		},
 	})
