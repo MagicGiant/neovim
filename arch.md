@@ -14,13 +14,18 @@ makepkg -si
 ## Необходимые пакеты
 
 ```sh
-yay -S git cmake extra-cmake-modules base-devel qt5-tools cargo unzip nvm luarocks python-pip brightnessctl
+yay -S --needed git cmake extra-cmake-modules base-devel qt5-tools cargo unzip nvm luarocks python-pip brightnessctl
 ```
 
 ## Установка приложений
 ```sh
-yay -S jiffy partitionmanager rar exfatprogs obs-studio crow-translater flameshot-git jdk-openjdk sing-geoip-db sing-geosite-db telegram-desktop-bin termite cava steam zoom onlyoffice-bin loupe visual-studio-code-bin  zsh fastfetch playerctl mouseless
+yay -S --needed jiffy partitionmanager rar exfatprogs obs-studio crow-translater flameshot-git jdk-openjdk sing-geoip-db sing-geosite-db telegram-desktop-bin termite cava steam zoom onlyoffice-bin loupe visual-studio-code-bin  zsh fastfetch playerctl mouseless
 
+```
+
+## yazi
+```sh
+yay -S --needed yazi imagemagick jq fd fzf zoxide resvg
 ```
 
 ## Установка китайских символов

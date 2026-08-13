@@ -5,6 +5,24 @@ layers:
 - name: initial
   bindings:
     rightalt: toggle-layer mouse
+    # capslock: layer vim
+- name: vim
+  bindings:
+    q: layer initial
+    h: left
+    j: down
+    k: up
+    p: leftctrl+v
+    l: right
+    i: layer initial
+    u: leftctrl+z
+    leftshift+o: multi up; end; enter
+    leftctrl+r: leftctrl+y
+    o: multi end; enter
+    b: leftctrl+left
+    w: leftctrl+right
+    capslock: layer initial
+    k0: home
 - name: mouse
   passThrough: true
   bindings:
@@ -25,5 +43,5 @@ layers:
     l: right
     o: multi end; enter
     b: leftctrl+left
-    leftshift+k4: end
+    capslock+k4: end
     k0: home

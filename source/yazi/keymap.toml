@@ -1,0 +1,4 @@
+[[mgr.prepend_keymap]]
+on   = [ "O" ]
+run  = 'shell "xdg-open %h" --orphan'
+desc = "Открыть в программе по умолчанию"
