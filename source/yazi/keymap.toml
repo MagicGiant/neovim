@@ -1,4 +1,15 @@
-[[mgr.prepend_keymap]]
-on   = [ "O" ]
-run  = 'shell "xdg-open %h" --orphan'
-desc = "Открыть в программе по умолчанию"
+[mgr]
+prepend_keymap = [
+    { on = [ "O" ], run = 'shell "xdg-open %h" --orphan', desc = "Открыть в программе по умолчанию" },
+		{ on = [ "W" ], run = 'shell "plasma-apply-wallpaperimage %h"', desc = "Установить обои"},
+
+    { on = [ "Z" ], run = 'shell "cd \"$(dirname \"%h\")\" && zip -r \"$(basename \"%h\").zip\" \"$(basename \"%h\")\""', desc = "Архивировать без лишней вложенности" },
+    { on = [ "<C-t>" ],  run = "shell -- dragon-drop -x -i -T %h", desc = "Перетащить в другое приложение" },
+
+    { on = [ "g", "m" ], run = "cd ~/MyDirect", desc = "Go MyDirect", for = "unix" },
+    { on = [ "g", "w" ], run = "cd ~/MyDirect/work", desc = "Go work", for = "unix" },
+    { on = [ "g", "W" ], run = "cd ~/MyDirect/wallpapers/", desc = "Go wallpapers", for = "unix" },
+    { on = [ "g", "c" ], run = "cd /home/sherka/neovim/source/", desc = "Go my configs", for = "unix" },
+    { on = [ "g", "C" ], run = "cd /home/sherka/.config", desc = "Go configs", for = "unix" },
+    { on = [ "g", "t" ], run = "cd /home/sherka/.local/share/Trash/files", desc = "Go trash", for = "unix" },
+]
