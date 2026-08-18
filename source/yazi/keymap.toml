@@ -9,7 +9,8 @@ prepend_keymap = [
     { on = [ "g", "m" ], run = "cd ~/MyDirect", desc = "Go MyDirect", for = "unix" },
     { on = [ "g", "w" ], run = "cd ~/MyDirect/work", desc = "Go work", for = "unix" },
     { on = [ "g", "W" ], run = "cd ~/MyDirect/wallpapers/", desc = "Go wallpapers", for = "unix" },
-    { on = [ "g", "c" ], run = "cd /home/sherka/neovim/source/", desc = "Go my configs", for = "unix" },
-    { on = [ "g", "C" ], run = "cd /home/sherka/.config", desc = "Go configs", for = "unix" },
-    { on = [ "g", "t" ], run = "cd /home/sherka/.local/share/Trash/files", desc = "Go trash", for = "unix" },
+    { on = [ "g", "c" ], run = "cd ~/neovim/source/", desc = "Go my configs", for = "unix" },
+    { on = [ "g", "C" ], run = "cd ~/.config", desc = "Go configs", for = "unix" },
+    { on = [ "g", "t" ], run = "cd ~/.local/share/Trash/files", desc = "Go trash", for = "unix" },
+    { on = [ "g", "M" ], run = "cd ~/MyDirect/music", desc = "Go trash", for = "unix" },
 ]

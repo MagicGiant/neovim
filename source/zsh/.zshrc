@@ -126,4 +126,5 @@ function y() {
 	command rm -f -- "$tmp"
 }
 
+export EDITOR='nvim'
 source ~/.secret.sh

@@ -1,0 +1,8 @@
+[opener]
+play = [ { run = 'mpv --no-video --really-quiet %s', orphan = true, desc = "Play with mpv" } ]
+
+[open]
+prepend_rules = [
+    { mime = "audio/*", use = "play" },
+    { url = "*.{mp3,flac,ogg,opus,wav,m4a,aac,wma}", use = "play" },
+]
