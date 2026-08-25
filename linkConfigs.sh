@@ -8,3 +8,4 @@ rm -rf ~/.config/waybar && ln -snf "$(pwd)/source/waybar" ~/.config/waybar
 rm -rf ~/.config/mouseless && ln -snf "$(pwd)/source/mouseless" ~/.config/mouseless
 rm -rf ~/.config/yazi && ln -snf "$(pwd)/source/yazi" ~/.config/yazi
 rm -rf ~/.config/opencode && ln -snf "$(pwd)/source/opencode" ~/.config/opencode
+rm ~/.config/herdr/config.toml && ln -snf "$(pwd)/source/herdr/config.toml"
