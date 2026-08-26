@@ -1,7 +1,10 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-vim.api.nvim_set_keymap("n", "<C-q>", ":wqa!<CR>", { noremap = true, silent = true })
+vim.keymap.set({ "n", "i" }, "<C-q>", function()
+	vim.cmd("wqa!")
+end, { silent = true })
+-- vim.api.nvim_set_keymap("n", "<C-й>", ":wqa!<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap("n", "<C-s>", ":wa!<CR>", { noremap = true, silent = true })
 
