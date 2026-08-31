@@ -13,4 +13,6 @@ prepend_keymap = [
     { on = [ "g", "C" ], run = "cd ~/.config", desc = "Go configs", for = "unix" },
     { on = [ "g", "t" ], run = "cd ~/.local/share/Trash/files", desc = "Go trash", for = "unix" },
     { on = [ "g", "M" ], run = "cd ~/MyDirect/music", desc = "Go trash", for = "unix" },
+    { on = [ "g", "r" ], run = "cd /mnt/d/rep", desc = "go rep", for = "unix" },
+    { on = [ "g", "u" ], run = "cd /mnt/c/Users/obidzhanov.as", desc = "go win user", for = "unix" },
 ]
