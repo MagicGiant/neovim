@@ -14,7 +14,7 @@ makepkg -si
 ## Необходимые пакеты
 
 ```sh
-yay -S --needed git cmake extra-cmake-modules base-devel qt5-tools cargo unzip nvm luarocks python-pip brightnessctl
+yay -S --needed git cmake extra-cmake-modules base-devel qt5-tools cargo unzip nvm luarocks python-pip brightnessctl qt6ct qt5ct
 ```
 
 ## Установка приложений

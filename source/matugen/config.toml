@@ -1,0 +1,12 @@
+[config]
+[templates.fuzzel]
+input_path = "/home/sherka/.config/matugen/templates/fuzzel.ini"
+output_path = "/home/sherka/.config/fuzzel/colors.ini"
+[templates.tmux]
+input_path = "/home/sherka/.config/matugen/templates/tmux-colors.conf"
+output_path = "/home/sherka/.config/.tmux.colors.conf"
+post_hook = "tmux source-file ~/.tmux.conf"
+[templates.cava]
+input_path = '/home/sherka/.config/matugen/templates/cava-colors.ini'
+output_path = '/home/sherka/.config/cava/themes/matugen.ini'
+post_hook = 'pkill -USR1 cava'

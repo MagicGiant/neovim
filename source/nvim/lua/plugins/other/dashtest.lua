@@ -7,6 +7,18 @@ return {
 			-- Choose your adapter, here all supported adapters are listed
 			adapters = {
 				require("quicktest.adapters.golang")({}),
+				require("neotest-jest")({
+					jestCommand = "npm test --",
+					jestArguments = function(defaultArguments, context)
+						return defaultArguments
+					end,
+					jestConfigFile = "custom.jest.config.ts",
+					env = { CI = true },
+					cwd = function(path)
+						return vim.fn.getcwd()
+					end,
+					isTestFile = require("neotest-jest.jest-util").defaultIsTestFile,
+				}),
 			},
 			ui = {
 				require("quicktest.ui.panel")({
@@ -27,6 +39,7 @@ return {
 		"nvim-lua/plenary.nvim",
 		"MunifTanjim/nui.nvim",
 		"dennypenta/dashtest.nvim",
+		"nvim-neotest/neotest-jest",
 	},
 	keys = {
 		{

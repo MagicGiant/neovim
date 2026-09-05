@@ -1,0 +1,15 @@
+binds {
+    Mod+D hotkey-overlay-title="Spotlight Bar: Open" { spawn "dms" "ipc" "call" "spotlight-bar" "open"; }
+    Mod+I hotkey-overlay-title="Open settings" { spawn "dms" "ipc" "call" "settings" "focusOrToggle"; }
+    Mod+U hotkey-overlay-title="Power Menu: Open" { spawn "dms" "ipc" "call" "powermenu" "open"; }
+    Mod+V hotkey-overlay-title="Clipboard: Open" { spawn "dms" "ipc" "call" "clipboard" "open"; }
+    Mod+N { focus-workspace-down; }
+    Mod+P { focus-workspace-up; }
+    Mod+Shift+N { move-column-to-workspace-down; }
+    Mod+Shift+P { move-column-to-workspace-up; }
+    Mod+C repeat=false { close-window; }
+    Mod+O repeat=false hotkey-overlay-title="Fullscreen" { fullscreen-window; }
+    Mod+Shift+H { move-column-left; }
+    Mod+Shift+L { move-column-right; }
+    Mod+Q hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+}

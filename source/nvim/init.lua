@@ -45,3 +45,5 @@ require("lazy").setup({
 require("setup.load")
 
 vim.cmd.colorscheme("everforest")
+-- Lua
+-- vim.cmd.colorscheme("base46-gruvchad")

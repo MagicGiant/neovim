@@ -1,7 +1,7 @@
 [mgr]
 prepend_keymap = [
     { on = [ "O" ], run = 'shell "xdg-open %h" --orphan', desc = "Открыть в программе по умолчанию" },
-		{ on = [ "W" ], run = 'shell "plasma-apply-wallpaperimage %h"', desc = "Установить обои"},
+		{ on = [ "W" ], run = 'shell "dms ipc call wallpaper set %h"', desc = "Установить обои"},
 
     { on = [ "Z" ], run = 'shell "cd \"$(dirname \"%h\")\" && zip -r \"$(basename \"%h\").zip\" \"$(basename \"%h\")\""', desc = "Архивировать без лишней вложенности" },
     { on = [ "<C-t>" ],  run = "shell -- dragon-drop -x -i -T %h", desc = "Перетащить в другое приложение" },
