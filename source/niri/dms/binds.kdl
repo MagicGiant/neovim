@@ -1,6 +1,7 @@
 binds {
     Mod+D hotkey-overlay-title="Spotlight Bar: Open" { spawn "dms" "ipc" "call" "spotlight-bar" "open"; }
     Mod+I hotkey-overlay-title="Open settings" { spawn "dms" "ipc" "call" "settings" "focusOrToggle"; }
+    Mod+Shift+W { spawn "dms" "ipc" "wallpaperCarousel" "toggle"; }
     Mod+U hotkey-overlay-title="Power Menu: Open" { spawn "dms" "ipc" "call" "powermenu" "open"; }
     Mod+V hotkey-overlay-title="Clipboard: Open" { spawn "dms" "ipc" "call" "clipboard" "open"; }
     Mod+N { focus-workspace-down; }
@@ -11,5 +12,9 @@ binds {
     Mod+O repeat=false hotkey-overlay-title="Fullscreen" { fullscreen-window; }
     Mod+Shift+H { move-column-left; }
     Mod+Shift+L { move-column-right; }
+    Mod+Shift+space { switch-focus-between-floating-and-tiling; }
+    Mod+space hotkey-overlay-title="Toggle Floating" { toggle-window-floating; }
+    Mod+G { spawn "niri-float-sticky" "-ipc" "toggle_sticky"; }
     Mod+Q hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Mod+X { spawn "bash" "/home/sherka/MyDirect/bin/vimn"; }
 }

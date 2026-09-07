@@ -1,3 +1,41 @@
 // DMS Window Rules - Managed by DankMaterialShell
 // Do not edit manually - changes may be overwritten
 
+// @id=wr_1788644075144724085 @name=firefox$т
+window-rule {
+    match app-id="firefox$" title="^(Картинка в картинке|Picture-in-Picture)$"
+    open-floating true
+    min-width 400
+    max-width 400
+    min-height 200
+    max-height 200
+    default-floating-position x=20 y=20 relative-to="bottom-right"
+}
+
+// @id=wr_1788647888628305659 @name=Crow translate
+window-rule {
+    match app-id="org.kde.CrowTranslate"
+    open-floating true
+    min-width 600
+    max-width 600
+    min-height 300
+    max-height 300
+    default-floating-position x=20 y=20 relative-to="top-right"
+}
+
+// @id=dms-floating-windows @name=DMS Floating Windows
+window-rule {
+    match app-id="^com.danklinux.dms$"
+    open-floating true
+}
+
+// @id=wr_1788787975446120124 @name=todo
+window-rule {
+    match app-id="kitty" title="todo"
+    open-floating true
+    min-width 800
+    max-width 800
+    min-height 600
+    max-height 600
+    default-floating-position x=20 y=20 relative-to="bottom-right"
+}

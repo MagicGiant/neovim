@@ -10,3 +10,6 @@ post_hook = "tmux source-file ~/.tmux.conf"
 input_path = '/home/sherka/.config/matugen/templates/cava-colors.ini'
 output_path = '/home/sherka/.config/cava/themes/matugen.ini'
 post_hook = 'pkill -USR1 cava'
+# [templates.yazi]
+# input_path = '/home/sherka/.config/matugen/templates/yazi.toml'
+# output_path = '~/.config/yazi/theme.toml'
