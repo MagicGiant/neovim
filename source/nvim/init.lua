@@ -14,6 +14,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+require("core.info")
 require("core.general")
 require("core.keymaps")
 
@@ -43,6 +44,7 @@ require("lazy").setup({
 })
 
 require("setup.load")
+vim.opt.laststatus = 0
 
 vim.cmd.colorscheme("everforest")
 -- Lua

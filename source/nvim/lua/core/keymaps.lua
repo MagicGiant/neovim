@@ -4,9 +4,10 @@ vim.g.maplocalleader = "\\"
 vim.keymap.set({ "n", "i" }, "<C-q>", function()
 	vim.cmd("wqa!")
 end, { silent = true })
--- vim.api.nvim_set_keymap("n", "<C-й>", ":wqa!<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap("n", "<C-s>", ":wa!<CR>", { noremap = true, silent = true })
+
+-- vim.keymap.set("n", "<C-K>", vim.lsp.buf.hover, { desc = "Показать информацию" })
 
 -- # РАБОТА С ОКНАМИ
 
