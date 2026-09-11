@@ -1,0 +1,41 @@
+{
+  "lockfileVersion": 1,
+  "plugins": {
+    "colorPickerDms": {
+      "repo": "https://github.com/bernardopg/color-picker-dms",
+      "commit": "e874c1cbb7980b4e5bd2b9e795c08da5b4cba05a"
+    },
+    "dankTranslate": {
+      "repo": "https://github.com/alcxyz/DankTranslate",
+      "commit": "10d88fc770ec54e27da1d7d112bed0b33ce806d7"
+    },
+    "deepseekWidget": {
+      "repo": "https://github.com/gylove1994/deepseek-dms-widget",
+      "commit": "31548fbe001c4ab122ec0d5e558bda7687db6d4b"
+    },
+    "dockerManager": {
+      "repo": "https://github.com/LuckShiba/DmsDockerManager",
+      "commit": "255f46794b6e3a5f5e842fe1330db3869deddc09"
+    },
+    "emojiLauncher": {
+      "repo": "https://github.com/devnullvoid/dms-emoji-launcher",
+      "commit": "8ff394e3ddfcb2fd755ed2e7b4c6f01f3e26e596"
+    },
+    "shellyUpdater": {
+      "repo": "https://github.com/rdannenbring/dms-shelly-updater",
+      "commit": "a48f4ad44fca329e3a593da47c4329f2c50a043f"
+    },
+    "storageMonitor": {
+      "repo": "https://github.com/YoungJurry/dms-storage-monitor",
+      "commit": "80ab9b889fc6520ffb9d363b75053c5345f2deb3"
+    },
+    "usbManager": {
+      "repo": "https://github.com/NordicsSys/dms-usb-manager",
+      "commit": "4dd61c1aa277a280fc05131342bc1cf3936a2a86"
+    },
+    "wallpaperCarousel": {
+      "repo": "https://github.com/motor-dev/wallpaperCarousel",
+      "commit": "761ecd1b7f347beee9f17909f8334d987c935a1a"
+    }
+  }
+}

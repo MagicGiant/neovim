@@ -12,8 +12,8 @@ binds {
     Mod+O repeat=false hotkey-overlay-title="Fullscreen" { fullscreen-window; }
     Mod+Shift+H { move-column-left; }
     Mod+Shift+L { move-column-right; }
-    Mod+Shift+space { switch-focus-between-floating-and-tiling; }
-    Mod+space hotkey-overlay-title="Toggle Floating" { toggle-window-floating; }
+    Mod+Shift+space hotkey-overlay-title="Toggle Floating" { toggle-window-floating; }
+    Mod+space { switch-focus-between-floating-and-tiling; }
     Mod+G { spawn "niri-float-sticky" "-ipc" "toggle_sticky"; }
     Mod+Q hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+X { spawn "bash" "/home/sherka/MyDirect/bin/vimn"; }

@@ -1,0 +1,4 @@
+plugins
+.changelog-*
+.firstlaunch
+plugin_settings.json

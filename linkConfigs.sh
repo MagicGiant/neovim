@@ -4,23 +4,24 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 config_dirs=(
-    nvim
-    hypr
-    kitty
-    mouseless
-    yazi
-    opencode
-    herdr
-    niri
-    fuzzel
-    matugen
-		cava
+	nvim
+	hypr
+	kitty
+	mouseless
+	yazi
+	opencode
+	herdr
+	niri
+	fuzzel
+	matugen
+	cava
+	DankMaterialShell
 )
 
 file_pairs=(
-    tmux
-		tmux_collors
-    zsh
+	tmux
+	tmux_collors
+	zsh
 )
 
 tmux_pair=("$SCRIPT_DIR/source/tmux/.tmux.conf" "$HOME/.tmux.conf")
