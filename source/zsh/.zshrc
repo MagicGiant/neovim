@@ -115,8 +115,6 @@ source $ZSH/oh-my-zsh.sh
 source /usr/share/nvm/init-nvm.sh
 
 export PATH="$PATH:/home/sherka/.local/bin"
-export PATH="$PATH:/home/sherka/MyDirect/bin"
-export PATH="$PATH:/home/sherka/MyDirect/autorunScripts"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd

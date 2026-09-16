@@ -14,7 +14,15 @@ makepkg -si
 ## Необходимые пакеты
 
 ```sh
-yay -S --needed git cmake extra-cmake-modules base-devel qt5-tools cargo unzip nvm luarocks python-pip brightnessctl qt6ct qt5ct
+yay -S --needed  git cmake extra-cmake-modules base-devel qt5-tools cargo unzip nvm luarocks python-pip brightnessctl qt6ct qt5ct polkit-gnome
+```
+
+## bluetooth
+
+```
+sudo modprobe btusb
+sudo systemctl enable bluetooth
+sudo systemctl start bluetooth
 ```
 
 ## Установка приложений
@@ -79,8 +87,6 @@ source ~/.zshrc
 
 ## Добавление дирректории в path.
 
-> ⚠️ Работает только в используемом окружении. Если используется .bashrc, записывать туда. Если .zshrc...
-
 ```sh
 export PATH=$PATH:/путь/к/директории
 ```
@@ -105,7 +111,7 @@ cd Graphite-kde-theme
 ./install.sh
 ```
 
-## Playerctl (позволяет прокручивать ролики и аудио. Можно назначить горячие клавиши)
+## Playerctl 
 
 ```sh
 playerctl position 5+

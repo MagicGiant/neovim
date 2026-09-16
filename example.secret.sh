@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+export DEEPSEEK_API_KEY=""
+export REDMINE_URL=""
+export REDMINE_API_KEY=""
+export KODEKS_PC_IP=""
+export KODEKS_PC_USERNAME=""
+export KODEKS_PC_PASSWORD=""
+export KODEKS_PC_DOMAIN=""
+export KODEKS_CLIENT_PATH=""
